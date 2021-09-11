@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <a href="/">Home</a>
+      <a href="/users/new"><button type="submit">Add User</button>
+    </header>
+    <main>
+      <% user.forEach(data => { %> 
+          <h2><%= data.name %></h2>
+          <h3><%= data.email %></h3>
+          <h2><%= data.name %></h2>
+        <h3><%= data.email %></h3>
+        <a href="/users/<%= data._id %>"><button type="submit">user</button></a>
+      <%}) %>
+        
+    </main>
+  </body>
+</html>
